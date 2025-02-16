@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Diet Plan</title>
+    <link rel="stylesheet" href="../css/input.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the Personalized Diet Recommendation</h1>
+        <p>Please fill in your details below to get your personalized diet plan.</p>
+    </header>
+
+    <section class="user-input-form" id="user-input-section">
+        <h2>Enter Your Details</h2>
+
+        <form id="user-form">
+            <!-- User Input Fields -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br>
+
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight"><br>
+
+            <label for="low_bp">Low Blood Pressure (Yes=1, No=0):</label>
+            <input type="number" id="low_bp" name="low_bp" min="0" max="1"><br>
+
+            <label for="high_bp">High Blood Pressure (Yes=1, No=0):</label>
+            <input type="number" id="high_bp" name="high_bp" min="0" max="1"><br>
+
+            <label for="sugar">Blood Sugar Level:</label>
+            <input type="number" id="sugar" name="sugar"><br>
+
+            <label for="diabetes">Diabetes (Yes=1, No=0):</label>
+            <input type="number" id="diabetes" name="diabetes" min="0" max="1"><br>
+
+            <label for="heart_disease">Heart Disease (Yes=1, No=0):</label>
+            <input type="number" id="heart_disease" name="heart_disease" min="0" max="1"><br>
+
+            <label for="menstrual_health">Menstrual Health (Yes=1, No=0):</label>
+            <input type="number" id="menstrual_health" name="menstrual_health" min="0" max="1"><br>
+
+            <button type="submit" id="submit-btn">Get Diet Plan</button>
+        </form>
+    </section>
+
+    <section class="diet-plan" id="diet-plan-section" style="display: none;">
+        <h2>Your Personalized Diet Plan</h2>
+        <div id="meal-plan-days"></div>
+        <button id="reset-btn">Reset Plan</button>
+    </section>
+
+    <script>
+        let userData = null;
+
+        // Handle the form submission
+        document.getElementById('user-form').addEventListener('submit', function (event) {
+            event.preventDefault();  // Prevent default form submission
+
+            // Collect the user input data
+            userData = {
+                "age": document.getElementById('age').value,
+                "gender": document.getElementById('gender').value,
+                "weight": document.getElementById('weight').value,
+                "low_bp": document.getElementById('low_bp').value || 0,
+                "high_bp": document.getElementById('high_bp').value || 0,
+                "sugar": document.getElementById('sugar').value || 0,
+                "diabetes": document.getElementById('diabetes').value || 0,
+                "heart_disease": document.getElementById('heart_disease').value || 0,
+                "menstrual_health": document.getElementById('menstrual_health').value || 0
+            };
+
+            // Hide input fields and show diet plan section
+            document.getElementById('user-input-section').style.display = 'none';
+            document.getElementById('diet-plan-section').style.display = 'block';
+
+            // Show the loading message and get the plan
+            fetchDietPlan(userData);
+        });
+
+        // Fetch the diet plan based on the user data
+        function fetchDietPlan(data) {
+            // Show loading message (optional, for better UX)
+            document.getElementById('submit-btn').innerHTML = "Loading...";
+            document.getElementById('submit-btn').disabled = true;
+
+            // Dynamically set the API URL
+            const API_URL = window.location.hostname === "localhost" ? "http://localhost:5000/api/recommend" : "https://your-api-domain.com/api/recommend";
+
+            // Post data to the backend API
+            fetch(API_URL, {
+                method: 'POST',
+                mode: 'cors',  // Ensure CORS mode is enabled
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);  // Log the response data
+                    if (data.recommended_30_day_diet) {
+                        displayDietPlan(data.recommended_30_day_diet);
+                    } else {
+                        alert('Error: Could not fetch diet plan');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching diet plan:', error);
+                    alert('Error fetching diet plan');
+                });
+        }
+
+        // Display the received diet plan
+        function displayDietPlan(dietPlan) {
+            let mealPlanHTML = '';
+
+            // Check if the dietPlan is an object and then iterate over the keys (days)
+            if (typeof dietPlan === 'object') {
+                Object.keys(dietPlan).forEach((key, index) => {
+                    const meal = dietPlan[key];  // Get the meal data for each day
+                    mealPlanHTML += `
+                        <div class="meal-day">
+                            <h4>${key}</h4>
+                            <p><strong>Breakfast:</strong> ${meal.breakfast}</p>
+                            <p><strong>Lunch:</strong> ${meal.lunch}</p>
+                            <p><strong>Dinner:</strong> ${meal.dinner}</p>
+                            <button class="complete-btn" onclick="markComplete(${index})">Complete</button>
+                            <span id="complete-status-${index}" style="display: none;">✓ Completed</span>
+                        </div>
+                    `;
+                });
+            }
+
+            document.getElementById('meal-plan-days').innerHTML = mealPlanHTML;
+            document.getElementById('submit-btn').innerHTML = "Get Diet Plan";  // Reset the button text
+            document.getElementById('submit-btn').disabled = false;  // Enable the button
+        }
+
+        // Mark the day as complete
+        function markComplete(index) {
+            const completeStatus = document.getElementById(`complete-status-${index}`);
+            completeStatus.style.display = 'inline';  // Show the tick
+            document.querySelectorAll('.complete-btn')[index].disabled = true;  // Disable the "Complete" button
+        }
+
+        // Reset the form and plan
+        document.getElementById('reset-btn').addEventListener('click', function () {
+            document.getElementById('user-form').reset();
+            document.getElementById('diet-plan-section').style.display = 'none';
+            document.getElementById('user-input-section').style.display = 'block';  // Show input section again
+            userData = null;
+        });
+    </script>
+
+</body>
+
+</html>

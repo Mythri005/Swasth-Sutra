@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plan</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .meal-plan {
+            margin-top: 20px;
+        }
+        .meal-plan h3 {
+            margin-bottom: 10px;
+        }
+        .meal-plan p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Diet Plan Recommendations</h1>
+
+    <div id="meal-plan-container" class="meal-plan">
+        <!-- Meal Plan will be displayed here -->
+    </div>
+
+    <script>
+        // Example user data (you can modify this as needed)
+        const userData = {
+            user_id: 1
+        };
+
+        // Fetch the diet plan from the backend
+        fetch('http://localhost:5000/api/recommend', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Log received data for debugging purposes
+            console.log('Received data:', data);
+
+            if (data.error) {
+                alert(data.error);
+            } else {
+                displayMealPlan(data);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error loading the diet plan');
+        });
+
+        // Function to display the meal plan on the page
+        function displayMealPlan(data) {
+            const mealPlanContainer = document.getElementById('meal-plan-container');
+
+            // Loop through the sorted meal plan and display the meals
+            for (let i = 0; i < data.meal_plan.length; i++) {
+                const dayData = data.meal_plan[i];
+                const mealDiv = document.createElement('div');
+                mealDiv.classList.add('meal');
+
+                const mealHeading = document.createElement('h3');
+                mealHeading.textContent = `Day ${i + 1}`;
+                mealDiv.appendChild(mealHeading);
+
+                const breakfast = document.createElement('p');
+                breakfast.textContent = `Breakfast: ${dayData.breakfast}`;
+                mealDiv.appendChild(breakfast);
+
+                const lunch = document.createElement('p');
+                lunch.textContent = `Lunch: ${dayData.lunch}`;
+                mealDiv.appendChild(lunch);
+
+                const dinner = document.createElement('p');
+                dinner.textContent = `Dinner: ${dayData.dinner}`;
+                mealDiv.appendChild(dinner);
+
+                mealPlanContainer.appendChild(mealDiv);
+            }
+        }
+    </script>
+
+</body>
+</html>

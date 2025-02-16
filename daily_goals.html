@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Goals</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #4CAF50;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #4CAF50;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 16px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        li.completed {
+            background-color: #d4edda;
+            text-decoration: line-through;
+            color: #28a745;
+        }
+
+        li button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        li button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Daily Goals</h1>
+        </header>
+
+        <!-- Set Daily Goal Form -->
+        <section id="set-goal-section">
+            <h2>Set a New Goal</h2>
+            <form id="set-goal-form">
+                <label for="goal-description">Goal Description:</label>
+                <input type="text" id="goal-description" name="goal-description" required>
+                <button type="submit">Set Goal</button>
+            </form>
+        </section>
+
+        <!-- Display Goals -->
+        <section id="goals-section">
+            <h2>Your Goals</h2>
+            <ul id="goals-list"></ul>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const goalForm = document.getElementById('set-goal-form');
+            const goalDescriptionInput = document.getElementById('goal-description');
+            const goalsList = document.getElementById('goals-list');
+
+            // Function to fetch a random goal for the user
+            function fetchDailyGoal() {
+                fetch('/goals/get_daily_goal/1')  // Assume user_id=1 for now
+                    .then(response => response.json())
+                    .then(data => {
+                        const goalItem = document.createElement('li');
+                        goalItem.textContent = data.goal_description;
+                        
+                        // Add a 'complete' button for each goal
+                        const completeButton = document.createElement('button');
+                        completeButton.textContent = 'Complete';
+                        completeButton.onclick = function () {
+                            completeGoal(data.goal_id);
+                        };
+
+                        goalItem.appendChild(completeButton);
+                        goalsList.appendChild(goalItem);
+                    })
+                    .catch(error => console.error('Error fetching daily goal:', error));
+            }
+
+            // Function to set a new goal
+            goalForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const goalDescription = goalDescriptionInput.value;
+
+                fetch('/goals/set', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        user_id: 1,  // Assume user_id=1 for now
+                        goal_description: goalDescription
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message);
+                    goalDescriptionInput.value = '';
+                })
+                .catch(error => console.error('Error setting goal:', error));
+            });
+
+            // Function to mark a goal as completed
+            function completeGoal(goalId) {
+                fetch(`/goals/complete/${goalId}`, {
+                    method: 'PUT'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message);
+                })
+                .catch(error => console.error('Error completing goal:', error));
+            }
+
+            // Fetch the daily goal when the page loads
+            fetchDailyGoal();
+        });
+    </script>
+</body>
+</html>

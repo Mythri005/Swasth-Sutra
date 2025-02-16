@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plan</title>
+    <link rel="stylesheet" href="../css/dietstyles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Nutrition Plan</h1>
+        <p>Choose a diet plan to follow and start tracking your meals.</p>
+    </header>
+    
+    <section class="plans">
+        <div class="plan">
+            <h2>30 Days Plan</h2>
+            <a href="meal_plan.html?plan=30" id="start-button-30" class="start-button" onclick="startLoading(event, 30)">Start</a>
+        </div>
+        
+        <div class="plan">
+            <h2>60 Days Plan</h2>
+            <a href="meal_plan.html?plan=60" id="start-button-60" class="start-button" onclick="startLoading(event, 60)">Start</a>
+        </div>
+
+        <div class="plan">
+            <h2>30 Days Plan (customized)</h2>
+            <a href="input.html?plan=30c" id="start-button-30c" class="start-button" onclick="startLoading(event)">Start</a>
+        </div>
+        
+
+        <div class="plan">
+            <h2>60 Days Plan (customized)</h2>
+            <a href="meal_plan.html?plan=60c" id="start-button-60c" class="start-button" onclick="startLoading(event, 60)">Start</a>
+        </div>
+    </section>
+
+    <script>
+        function startLoading(event, planId) {
+            const button = event.target;
+            button.innerHTML = "Loading...";  // Change button text to indicate loading
+            button.style.pointerEvents = "none";  // Disable further clicks while loading
+        }
+
+        function startPlan(planType) {
+            // Set the current plan
+            currentPlan = planType;
+            const userId = 1; // Assuming user ID is 1, adjust as necessary
+            const userData = {
+                age: 30, // Get these values dynamically from user input, hardcoded for now
+                gender: "male", // Change as needed
+                weight: 75,
+                low_bp: 0,
+                high_bp: 0,
+                sugar: 100,
+                diabetes: 0,
+                heart_disease: 0,
+                menstrual_health: 0
+            };
+
+            // Send POST request to /api/recommend with user data
+            fetch('http://localhost:5000/api/recommend', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(userData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Data fetched:', data);
+                if (data.error) {
+                    alert(data.error);
+                } else {
+                    // Redirect to the plan page with the 30-day customized diet
+                    window.location.href = `meal_plan.html?plan=${planType}c`;  // Corrected plan URL with dynamic planType
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error loading the diet plan');
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const planType = urlParams.get('plan');
+
+            if (planType) {
+                // Fetch the plan details and render the meal plan
+                const userId = 1; // Assuming user ID is 1
+                const planEndpoint = `http://localhost:5000/diet/get/${planType}-day/${userId}`;
+
+                console.log(`Fetching diet plan details for: ${planType}`);  // Debugging line
+
+                fetch(planEndpoint)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Meal Plan Data:', data);  // Debugging line
+
+                        if (!data[`${planType}-day`]) {
+                            alert('No meal plan data available.');
+                            return;
+                        }
+
+                        const mealPlan = data[`${planType}-day`];
+                        let mealPlanHTML = `<h3>Diet Plan for ${planType === '30' ? '30 Days' : '60 Days'}</h3>`;
+
+                        for (let day in mealPlan) {
+                            mealPlanHTML += `
+                                <div id="day-${day}" class="meal-day">
+                                    <h4>Day ${day}</h4>
+                                    <p><strong>Breakfast:</strong> ${mealPlan[day].breakfast}</p>
+                                    <p><strong>Lunch:</strong> ${mealPlan[day].lunch}</p>
+                                    <p><strong>Dinner:</strong> ${mealPlan[day].dinner}</p>
+                                    <button id="complete-btn-${day}" onclick="markCompleted(${day})">Complete</button>
+                                </div>
+                            `;
+                        }
+
+                        document.getElementById('meal-plan-days').innerHTML = mealPlanHTML;
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Error loading the diet plan');
+                    });
+            }
+        });
+
+        // Function to mark the day as complete
+        function markCompleted(day) {
+            const button = document.getElementById(`complete-btn-${day}`);
+            button.innerHTML = "Completed";
+            button.disabled = true;
+        }
+    </script>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

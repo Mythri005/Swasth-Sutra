@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Nutrition</title>
+    <!-- Importing Poppins Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/hstyles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"> <!-- Swiper for Carousel -->
+</head>
+<body>
+    <!-- Header with Logo and Sign Up/Login links at the top-right corner -->
+    <header>
+        <div class="logo">
+            <h1>Nutrition Assistance</h1>
+        </div>
+        <div class="auth-links">
+            <a href="signup.html" class="btn">Sign Up</a>
+            <a href="login.html" class="btn">Login</a>
+        </div>
+    </header>
+
+    <!-- Main Section: Overview of the Website -->
+    <section class="overview">
+        <div class="container">
+            <h2>Swasth-Sutra</h2>
+            <p>Your go-to platform for personalized nutrition advice, diet plans, and expert health tips. We help you achieve your health goals with the right nutrition strategies tailored just for you.</p>
+            <a href="signup.html" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Image Slider Section -->
+    <section class="slider">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../images/millet1.jpg" alt="Millet Nutrition" />
+                    <div class="slide-caption">
+                        <h3>Millet-Based Nutrition</h3>
+                        <p>Experience the health benefits of millet in your daily diet.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/millet2.jpg" alt="Personalized Plans" />
+                    <div class="slide-caption">
+                        <h3>Personalized Diet Plans</h3>
+                        <p>Tailored nutrition plans for your unique health goals.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/millet3.jpg" alt="Healthy Lifestyle" />
+                    <div class="slide-caption">
+                        <h3>Healthy Lifestyle</h3>
+                        <p>Track your progress and make sustainable healthy changes.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Footer with basic information -->
+    <footer>
+        <p>Contact us: <a href="mailto:info@professionnutrition.com">info@professionnutrition.com</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> <!-- Swiper JS -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 3000,  // Slide change every 3 seconds
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Level Tracker</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #26303c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        #history-points {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 1.1em;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
+            align-items: center;
+        }
+
+        #left-date, #right {
+            width: 30%;
+        }
+
+        #center {
+            text-align: center;
+            position: relative;
+            width: 40%;
+        }
+
+        /* Water level container */
+        #water-background {
+            position: relative;
+            background-color: #e0f7fa;
+            border-radius: 50%;
+            height: 250px;
+            width: 250px;
+            margin: 0 auto;
+            overflow: hidden; /* Ensure water doesn't overflow */
+            border: 5px solid #4e82ba;
+        }
+
+        /* Water level animation */
+        #water-level {
+            position: absolute;
+            bottom: 0;
+            background-color: #83b0e1;
+            border-radius: 50%;
+            width: 100%;
+            height: 0%;  /* Initially no water */
+            transition: height 1s ease-out; /* Smooth animation */
+        }
+
+        #percentage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            font-weight: bold;
+            color: #466c94;
+        }
+
+        input[type="date"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            background-color: #589e83;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Water Level Tracker</h1>
+        <div id="history-points">History Points: 0</div>
+    </header>
+
+    <!-- Main Content Section -->
+    <section>
+        <div id="left-date">
+            <h2>Select Date</h2>
+            <input type="date">
+        </div>
+        <div id="center">
+            <div id="water-background">
+                <div id="water-level"></div>
+                <div id="percentage">0 ml</div>
+            </div>
+            <h2>Water Level</h2>
+        </div>
+        <div id="right">
+            <h2>Set Water Level</h2>
+            <input type="number" id="water-input" placeholder="Enter water in ml" min="0" max="2000">
+            <button id="update-button">Update Level</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Water Tracker - All Rights Reserved</p>
+    </footer>
+
+    <script>
+        const updateButton = document.getElementById('update-button');
+        const waterLevel = document.getElementById('water-level');
+        const percentage = document.getElementById('percentage');
+        const waterInput = document.getElementById('water-input');
+
+        const dailyLimit = 2000; // Daily limit in ml
+
+        updateButton.addEventListener('click', () => {
+            let level = parseInt(waterInput.value);
+
+            // Ensure the input is a number and within range
+            if (isNaN(level) || level < 0 || level > dailyLimit) {
+                alert(`Please enter a valid number between 0 and ${dailyLimit} ml.`);
+                return;
+            }
+
+            // Calculate height as a percentage of the daily limit
+            const height = (level / dailyLimit) * 100;
+            waterLevel.style.height = `${height}%`;
+            percentage.textContent = `${level} ml`;
+        });
+    </script>
+
+</body>
+</html>
