@@ -1,0 +1,111 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 16px; /* Ensure body font size is consistent */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    font-size: 2em; /* Uniform font size for headings */
+    margin-bottom: 10px;
+}
+
+/* Header Section */
+header {
+    background-color: #2980b9;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em; /* Adjusted to be consistent */
+}
+
+header p {
+    font-size: 1.2em; /* Consistent text size in header */
+}
+
+/* Millets Section */
+.millets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.millet-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    font-size: 1em; /* Ensure consistent font size inside the millet item */
+}
+
+.millet-item:hover {
+    transform: scale(1.05);
+}
+
+.millet-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.millet-item h2 {
+    font-size: 1.8em; /* Make header consistent in size */
+    margin-bottom: 10px;
+}
+
+.millet-item table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.millet-item table th, .millet-item table td {
+    padding: 12px; /* Uniform padding for table cells */
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 1em; /* Consistent font size for table text */
+}
+
+.millet-item table th {
+    background-color: #2980b9;
+    color: white;
+}
+
+.millet-item table td {
+    background-color: #ecf0f1;
+}
+
+/* Footer */
+footer {
+    background-color: #2980b9;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1.1em; /* Consistent footer text size */
+}

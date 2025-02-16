@@ -1,0 +1,130 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general layout */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('../images/plant.jpg');  /* Background image URL */
+    background-size: cover;  /* Image covers the full viewport */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; /* White text for contrast */
+    height: 100vh; /* Ensure full viewport height */
+    display: flex;
+    justify-content: center;  /* Horizontally center the login form */
+    align-items: center;  /* Vertically center the login form */
+    margin: 0; /* Remove any default margin */
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;  /* Ensures it takes the full height */
+}
+
+/* Form Box Styling */
+.login-form {
+    background-color: rgba(255, 255, 255, 0.85);  /* Slightly transparent white background */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;  /* Ensure it doesn't stretch too wide */
+    text-align: center;
+}
+
+/* Form Heading */
+h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Subheading */
+p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Input fields */
+.input-container {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f7f7f7;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Button styling */
+.login-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #45a049;
+}
+
+/* Extra options */
+.extra-options {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.extra-options a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.extra-options a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    font-size: 14px;
+}

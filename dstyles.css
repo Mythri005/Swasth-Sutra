@@ -1,0 +1,215 @@
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg'); /* Set background image */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    overflow-y: scroll; /* Allow scrolling */
+}
+
+/* Navigation Bar at the top */
+.navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.navbar ul li a:hover {
+    background-color: #4CAF50;
+    border-radius: 5px;
+}
+
+/* Dashboard container */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 80px; /* Make space for the navbar */
+}
+
+/* Header Styles */
+.header-container {
+    position: relative;
+    background-image: url('../images/plant.jpg'); /* Large background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.header-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.header-container h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif; /* Google Font applied here */
+}
+
+.header-container p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Main Content Area */
+.main-content {
+    width: 100%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Card Styles */
+.card {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card p {
+    font-size: 1rem;
+    margin: 0 0 10px 0; /* Add spacing below text */
+}
+
+.card button {
+    align-self: flex-start; /* Align the button to the left */
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #45a049;
+}
+
+/* AI Chatbot Container */
+.chatbot-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.chatbot-inner {
+    width: 100%;
+    height: 100%;
+}
+
+/* AI Chatbot Button */
+.chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* AI Chatbot Button */
+.chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Button Style */
+.chatbot-button button {
+    padding: 0;  /* No padding needed as the image takes up the space */
+    background-color: #4CAF50;  /* Green background */
+    border: none;
+    border-radius: 50%;  /* Circle shape */
+    cursor: pointer;
+    width: 70px;  /* Button width */
+    height: 70px;  /* Button height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect */
+.chatbot-button button:hover {
+    background-color: #45a049;  /* Slightly darker green on hover */
+}
+
+/* Image inside the button */
+.chatbot-button img.chatbot-icon {
+    width: 50px;  /* Adjust the image size */
+    height: 50px;  /* Adjust the image size */
+    object-fit: cover;  /* Ensure the image covers the area without distortion */
+    border-radius: 50%;  /* Keep the image round */
+}
+

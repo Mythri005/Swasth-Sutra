@@ -1,0 +1,228 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general layout */
+body {
+    font-family: 'Roboto', sans-serif; /* Modern and readable font */
+    background-color: #fafafa; /* Light, neutral background */
+    color: #333;
+    line-height: 1.75;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a; /* Darker background for sophistication */
+    padding: 15px 40px; /* Padding for clean layout */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+header .logo h1 {
+    font-family: 'Montserrat', sans-serif; /* Bold font for the logo */
+    font-size: 30px;
+    font-weight: 700;
+}
+
+header .auth-links {
+    display: flex;
+    gap: 25px;
+}
+
+header .auth-links .btn {
+    background-color: #4CAF50; /* Green buttons for emphasis */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px; /* Rounded button shape for modern look */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Added hover effects */
+}
+
+header .auth-links .btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Smooth scaling effect */
+}
+
+/* Main Section (Overview) */
+.overview {
+    margin-top: 80px;
+    padding: 100px 20px;
+    text-align: left;
+    background: url('../images/home.jpg') no-repeat center center; /* No fixed background */
+    background-size: cover;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.overview .container {
+    max-width: 600px; /* Limit container width to half of the screen */
+    margin-left: 20px; /* Add a small margin on the left */
+    padding: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Darker text shadow for contrast */
+}
+
+.overview h2 {
+    font-family: 'Lora', serif; /* Elegant font for the main heading */
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px; /* Reduced bottom margin to bring text closer */
+    letter-spacing: 2px; /* Added letter spacing for sophistication */
+}
+
+.overview p {
+    font-family: 'Roboto', sans-serif; /* Consistent font for description */
+    font-size: 18px; /* Reduced font size for better alignment */
+    margin-bottom: 20px; /* Reduced margin to bring text closer */
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    font-style: italic; /* Make the paragraph text more visually appealing */
+    font-weight: 400;
+}
+
+.overview .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 35px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.overview .btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Added smooth scaling effect */
+}
+
+/* Image Slider Section */
+.slider {
+    margin-top: 100px;
+    position: relative;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    border-radius: 15px; /* Rounded corners for the slider */
+    overflow: hidden; /* Ensures images don't overflow */
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fit properly */
+    border-radius: 15px;
+}
+
+
+.slide-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.slide-caption h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.slide-caption p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1); /* Added shadow for separation */
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for mobile devices */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .auth-links {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .overview {
+        padding: 60px 20px;
+        text-align: left;
+        height: auto;
+    }
+
+    .overview h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .overview p {
+        font-size: 16px;
+        max-width: 600px;
+    }
+
+    .overview .btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    .swiper-container {
+        height: 300px;
+    }
+
+    .slide-caption h3 {
+        font-size: 22px;
+    }
+
+    .slide-caption p {
+        font-size: 16px;
+    }
+}
