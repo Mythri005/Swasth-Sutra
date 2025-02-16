@@ -1,0 +1,448 @@
+{
+    "Millet Porridge": {
+        "ingredients": [
+            "1/2 cup Millets",
+            "1 cup Milk (or plant-based milk)",
+            "1 tbsp Honey",
+            "1 tbsp Nuts (Almonds, Cashews, Walnuts)"
+        ],
+        "instructions": "Rinse the millets thoroughly and soak them in water for 30 minutes. In a pan, boil the milk and add soaked millets. Stir continuously and cook for 10 minutes until soft. Add honey for sweetness and top with chopped nuts before serving."
+    },
+    "Ragi Ball": {
+        "ingredients": [
+            "1 cup Ragi flour",
+            "1.5 cups Water",
+            "A pinch of Salt"
+        ],
+        "instructions": "Boil water in a pan and add a pinch of salt. Gradually add ragi flour while stirring continuously to avoid lumps. Cook for 5-7 minutes on low heat until the dough forms a thick consistency. Roll into small balls and serve with curry or chutney."
+    },
+    "Foxtail Millet Soup": {
+        "ingredients": [
+            "1/2 cup Foxtail millet",
+            "1/2 cup Mixed vegetables (Carrot, Beans, Peas)",
+            "2 cups Water",
+            "1/2 tsp Black pepper",
+            "1/2 tsp Salt",
+            "1/2 tsp Cumin seeds"
+        ],
+        "instructions": "Rinse the foxtail millet and soak for 20 minutes. In a pot, heat a little oil, add cumin seeds, and sauté the chopped vegetables. Add soaked millet, water, salt, and black pepper. Cook for 15-20 minutes until everything is soft. Blend if a smooth consistency is preferred."
+    },
+    "Jowar Roti": {
+        "ingredients": [
+            "1 cup Jowar flour",
+            "1/2 cup Warm water",
+            "A pinch of Salt"
+        ],
+        "instructions": "In a bowl, mix jowar flour with salt. Gradually add warm water and knead into a soft dough. Divide into small portions and roll into thin rotis using a rolling pin. Cook on a hot pan for 2 minutes on each side until golden brown. Serve with curry."
+    },
+    "Bajra Khichdi": {
+        "ingredients": [
+            "1/2 cup Bajra (Pearl Millet), soaked overnight",
+            "1/4 cup Moong Dal",
+            "1 small Tomato, chopped",
+            "1/2 tsp Cumin seeds",
+            "1/2 tsp Turmeric powder",
+            "1/2 tsp Salt"
+        ],
+        "instructions": "Rinse bajra and moong dal well. In a pressure cooker, heat oil, add cumin seeds, chopped tomatoes, and turmeric powder. Add bajra, moong dal, and 2 cups of water. Cook for 3-4 whistles. Serve warm with yogurt or pickles."
+    },
+    "Quinoa Salad": {
+        "ingredients": [
+            "1/2 cup Cooked Quinoa",
+            "1 small Tomato, chopped",
+            "1 small Cucumber, chopped",
+            "1 tbsp Lemon juice",
+            "Salt & Pepper to taste"
+        ],
+        "instructions": "Cook quinoa as per instructions and let it cool. Mix with chopped tomatoes, cucumbers, lemon juice, salt, and pepper. Toss well and serve fresh as a healthy salad."
+    },
+    "Brown Rice and Dal": {
+        "ingredients": [
+            "1 cup Brown Rice",
+            "1/2 cup Toor Dal (Split Pigeon Pea)",
+            "1/2 tsp Turmeric",
+            "1 tsp Salt",
+            "1/2 tsp Cumin seeds"
+        ],
+        "instructions": "Rinse brown rice and dal separately. Cook rice with 2 cups of water. In another pan, cook dal with turmeric and salt until soft. Heat oil, add cumin seeds, and pour the dal over it."
+    },
+    "Oats Upma": {
+        "ingredients": [
+            "1/2 cup Oats",
+            "1 small Carrot, grated",
+            "1/4 cup Green Peas",
+            "1/2 tsp Mustard seeds",
+            "1/2 tsp Salt"
+        ],
+        "instructions": "Heat oil in a pan, add mustard seeds and let them splutter. Add grated carrots and peas, sauté for 2 minutes. Add oats and mix well. Pour in 1 cup water and cook for 3-4 minutes. Serve warm."
+    },
+    "Vegetable Millet Pulao": {
+        "ingredients": [
+            "1 cup Mixed Millets",
+            "1/2 cup Mixed Vegetables (Carrots, Beans, Peas)",
+            "1 tsp Garam Masala",
+            "1/2 tsp Salt"
+        ],
+        "instructions": "Heat oil in a pan, add chopped vegetables, and sauté for 3 minutes. Add millets, garam masala, and 2 cups of water. Cover and cook on low flame for 15 minutes. Serve hot."
+    },
+    "Ragi Idli": {
+        "ingredients": [
+            "1 cup Ragi flour",
+            "1/2 cup Urad Dal",
+            "1/2 tsp Salt"
+        ],
+        "instructions": "Soak urad dal for 4 hours and grind into a smooth paste. Mix with ragi flour, add salt, and ferment overnight. Pour into idli molds and steam for 10-12 minutes. Serve hot with chutney."
+    },
+    "Pumpkin Soup": {
+        "ingredients": [
+            "1 cup Pumpkin, diced",
+            "1 small Onion, chopped",
+            "1 clove Garlic, minced",
+            "1 cup Coconut milk"
+        ],
+        "instructions": "Sauté onions and garlic in a pan. Add diced pumpkin and cook for 10 minutes. Blend until smooth, add coconut milk, and simmer for 5 minutes. Serve warm."
+    },
+    "Banana Pancakes": {
+        "ingredients": [
+            "1 ripe Banana",
+            "1/2 cup Oats",
+            "1 Egg",
+            "1/4 cup Milk"
+        ],
+        "instructions": "Mash banana in a bowl. Add oats, egg, and milk. Mix into a smooth batter. Heat a pan, pour small portions, and cook on medium heat until golden brown. Serve with honey or yogurt."
+    },
+    "Tomato Rasam": {
+        "ingredients": [
+            "2 Tomatoes, chopped",
+            "1/2 tsp Tamarind paste",
+            "1/2 tsp Mustard seeds",
+            "1/2 tsp Black pepper"
+        ],
+        "instructions": "Heat oil in a pan, add mustard seeds and let them splutter. Add chopped tomatoes and tamarind paste. Cook until tomatoes soften. Add 2 cups water and black pepper. Simmer for 5 minutes. Serve hot."
+    },
+        "Sprouted Moong Salad": {
+            "ingredients": [
+                "1/2 cup Sprouted Moong",
+                "1 small Tomato, chopped",
+                "1 small Cucumber, chopped",
+                "1 tbsp Lemon juice",
+                "Salt & Pepper to taste"
+            ],
+            "instructions": "Mix sprouted moong with chopped tomato and cucumber. Add lemon juice, salt, and pepper to taste. Toss well and serve fresh as a light and nutritious salad."
+        },
+        "Mixed Millet Dosa": {
+            "ingredients": [
+                "1/2 cup Ragi flour",
+                "1/4 cup Bajra flour",
+                "1/4 cup Jowar flour",
+                "1/2 cup Rice flour",
+                "1 cup Yogurt",
+                "Salt to taste"
+            ],
+            "instructions": "Mix all flours with yogurt, salt, and enough water to form a smooth batter. Let it rest for 30 minutes. Pour a ladleful of batter onto a hot pan and spread in a circular motion. Cook on medium heat until golden brown. Serve with chutney."
+        },
+        "Methi Thepla": {
+            "ingredients": [
+                "1 cup Whole Wheat Flour",
+                "1/2 cup Chopped Methi Leaves",
+                "1/2 tsp Turmeric Powder",
+                "1/2 tsp Salt",
+                "1/2 tsp Carom Seeds"
+            ],
+            "instructions": "Mix flour with methi leaves, turmeric, salt, and carom seeds. Add water gradually and knead into a soft dough. Roll into thin circles and cook on a pan with minimal oil until golden brown."
+        },
+        "Lemon Millet Rice": {
+            "ingredients": [
+                "1 cup Cooked Little Millet",
+                "1 tbsp Lemon Juice",
+                "1/2 tsp Mustard Seeds",
+                "1/4 tsp Turmeric Powder",
+                "1 Green Chili, chopped",
+                "Salt to taste"
+            ],
+            "instructions": "Heat oil in a pan, add mustard seeds and let them splutter. Add green chili, turmeric powder, and salt. Mix in cooked little millet and stir well. Finish with lemon juice and serve warm."
+        },
+        "Palak Dal (Spinach Lentils)": {
+            "ingredients": [
+                "1/2 cup Toor Dal",
+                "1 cup Chopped Spinach",
+                "1 small Onion, chopped",
+                "1 small Tomato, chopped",
+                "1/2 tsp Cumin Seeds",
+                "1/2 tsp Turmeric Powder",
+                "Salt to taste"
+            ],
+            "instructions": "Cook toor dal with turmeric until soft. In another pan, heat oil and add cumin seeds. Sauté onions and tomatoes until soft, then add chopped spinach. Combine with dal and simmer for 5 minutes."
+        },
+        "Sweet Potato Mash": {
+            "ingredients": [
+                "1 medium Sweet Potato, boiled and mashed",
+                "1/4 tsp Cinnamon Powder",
+                "1 tbsp Honey",
+                "1 tbsp Chopped Nuts (optional)"
+            ],
+            "instructions": "Boil and mash sweet potato until smooth. Mix in cinnamon powder and honey. Top with chopped nuts if desired. Serve warm or chilled."
+        },
+        "Chia Pudding": {
+            "ingredients": [
+                "2 tbsp Chia Seeds",
+                "1 cup Almond Milk",
+                "1 tbsp Honey",
+                "1/2 cup Chopped Fruits (Banana, Berries, Mango)"
+            ],
+            "instructions": "Mix chia seeds with almond milk and honey. Stir well and refrigerate for at least 4 hours or overnight. Before serving, top with chopped fruits."
+        },
+        "Tomato Quinoa Soup": {
+            "ingredients": [
+                "1/2 cup Cooked Quinoa",
+                "2 Tomatoes, blended",
+                "1 small Carrot, chopped",
+                "1/2 tsp Cumin Powder",
+                "Salt & Pepper to taste"
+            ],
+            "instructions": "In a pot, heat a little oil and sauté carrots. Add blended tomatoes, cumin powder, salt, and pepper. Stir in cooked quinoa and let it simmer for 10 minutes. Serve hot."
+        },
+        "Banana Ragi Porridge": {
+            "ingredients": [
+                "1/2 cup Ragi Flour",
+                "1 cup Milk",
+                "1/2 Ripe Banana, mashed",
+                "1 tbsp Jaggery (optional)"
+            ],
+            "instructions": "Mix ragi flour with milk in a pot. Cook on low heat, stirring continuously until thick. Add mashed banana and jaggery for sweetness. Serve warm."
+        },
+        "Beetroot Millet Cutlets": {
+            "ingredients": [
+                "1/2 cup Cooked Foxtail Millet",
+                "1 small Beetroot, grated",
+                "1 small Potato, boiled and mashed",
+                "1/2 tsp Garam Masala",
+                "Salt to taste"
+            ],
+            "instructions": "Mix all ingredients together into a dough. Shape into small patties and shallow fry on a pan until golden brown. Serve with mint chutney."
+        },
+        "Green Gram (Moong) Dal": {
+            "ingredients": [
+                "1/2 cup Green Gram (Moong Dal)",
+                "1 small Onion, chopped",
+                "1 small Tomato, chopped",
+                "1/2 tsp Turmeric Powder",
+                "Salt to taste"
+            ],
+            "instructions": "Cook green gram with turmeric until soft. In another pan, sauté onions and tomatoes, then add the cooked dal. Simmer for 5 minutes and serve."
+        },
+        "Masala Millet Poha": {
+            "ingredients": [
+                "1 cup Barnyard Millet Flakes (Poha)",
+                "1/4 cup Mixed Vegetables (Carrots, Beans, Peas)",
+                "1/2 tsp Mustard Seeds",
+                "1/4 tsp Turmeric Powder",
+                "Salt to taste"
+            ],
+            "instructions": "Soak millet poha in water for 2 minutes and drain. Heat oil, add mustard seeds and sauté vegetables. Add turmeric and salt, mix in poha, and cook for 2 minutes."
+        },
+        "Ragi Mudde": {
+            "ingredients": [
+                "1/2 cup Ragi Flour",
+                "1 cup Water",
+                "A pinch of Salt"
+            ],
+            "instructions": "Boil water in a pot and add salt. Gradually add ragi flour, stirring continuously. Once it thickens, turn off the heat and roll into balls. Serve hot with dal or chutney."
+        },
+        "Millet Thali": {
+            "ingredients": [
+                "1 cup Cooked Barnyard Millet",
+                "1 serving Dal",
+                "1 serving Vegetable Sabzi",
+                "1 serving Curd"
+            ],
+            "instructions": "Serve cooked millet alongside dal, vegetable sabzi, and curd as a complete meal."
+        },
+        "Spinach Bajra Paratha": {
+            "ingredients": [
+                "1 cup Bajra Flour",
+                "1/2 cup Chopped Spinach",
+                "1/2 tsp Carom Seeds",
+                "Salt to taste"
+            ],
+            "instructions": "Mix all ingredients into a soft dough. Roll into flat parathas and cook on a pan with minimal oil."
+        },
+        "Lauki (Bottle Gourd) Sabzi": {
+            "ingredients": [
+                "1 cup Chopped Lauki",
+                "1/2 tsp Cumin Seeds",
+                "1/2 tsp Turmeric Powder",
+                "Salt to taste"
+            ],
+            "instructions": "Heat oil, add cumin seeds and chopped lauki. Add turmeric and salt. Cover and cook for 10 minutes."
+        },
+        "Dal Tadka": {
+            "ingredients": [
+                "1/2 cup Toor Dal",
+                "1 small Onion, chopped",
+                "1 small Tomato, chopped",
+                "1/2 tsp Mustard Seeds",
+                "1/2 tsp Cumin Seeds"
+            ],
+            "instructions": "Cook dal with turmeric. In another pan, heat oil and sauté onions, tomatoes, mustard, and cumin seeds. Mix into the dal and serve hot."
+        },
+            "Barnyard Millet Pongal": {
+                "ingredients": [
+                    "1/2 cup Barnyard Millet",
+                    "1/4 cup Moong Dal",
+                    "1/2 tsp Black Pepper",
+                    "1/2 tsp Cumin Seeds",
+                    "1 tbsp Ghee",
+                    "Salt to taste"
+                ],
+                "instructions": "Roast barnyard millet and moong dal separately. Heat ghee in a pan, add cumin seeds and black pepper. Add roasted millet, moong dal, and 2 cups of water. Cover and cook for 10 minutes until soft. Serve hot."
+            },
+            "Bajra Methi Poori": {
+                "ingredients": [
+                    "1 cup Bajra Flour",
+                    "1/2 cup Whole Wheat Flour",
+                    "1/2 cup Chopped Methi Leaves",
+                    "1/2 tsp Salt",
+                    "1/4 tsp Carom Seeds"
+                ],
+                "instructions": "Mix all ingredients with enough water to form a stiff dough. Roll into small discs and deep fry in hot oil until golden brown. Serve with yogurt or pickles."
+            },
+            "Ragi Banana Smoothie": {
+                "ingredients": [
+                    "1/2 cup Ragi Flour",
+                    "1 Banana",
+                    "1 cup Milk (or Almond Milk)",
+                    "1 tbsp Honey"
+                ],
+                "instructions": "Blend ragi flour, banana, milk, and honey until smooth. Serve chilled as a nutritious smoothie."
+            },
+            "Jowar Upma": {
+                "ingredients": [
+                    "1 cup Jowar Rava",
+                    "1/2 cup Mixed Vegetables (Carrot, Beans, Peas)",
+                    "1/2 tsp Mustard Seeds",
+                    "1/2 tsp Salt"
+                ],
+                "instructions": "Dry roast jowar rava for 2 minutes. Heat oil, add mustard seeds, and sauté vegetables. Add jowar rava, 2 cups of water, and salt. Cook until soft."
+            },
+            "Bajra Vegetable Cheela": {
+                "ingredients": [
+                    "1 cup Bajra Flour",
+                    "1/4 cup Chopped Vegetables (Carrot, Capsicum, Tomato)",
+                    "1/2 tsp Cumin Seeds",
+                    "Salt to taste"
+                ],
+                "instructions": "Mix all ingredients with enough water to make a thin batter. Pour onto a hot pan, spread evenly, and cook on both sides until golden brown."
+            },
+            "Foxtail Millet Kheer": {
+                "ingredients": [
+                    "1/2 cup Foxtail Millet",
+                    "1 cup Milk",
+                    "1 tbsp Jaggery",
+                    "1 tbsp Chopped Nuts (Almonds, Cashews, Pistachios)"
+                ],
+                "instructions": "Cook foxtail millet in water until soft. Add milk, stir continuously, and simmer for 5 minutes. Sweeten with jaggery and garnish with nuts."
+            },
+            "Multigrain Roti": {
+                "ingredients": [
+                    "1/2 cup Whole Wheat Flour",
+                    "1/4 cup Ragi Flour",
+                    "1/4 cup Jowar Flour",
+                    "1/4 cup Bajra Flour",
+                    "A pinch of Salt"
+                ],
+                "instructions": "Mix all flours with salt and enough water to form a soft dough. Roll into rotis and cook on a pan until golden brown."
+            },
+            "Lauki Bajra Paratha": {
+                "ingredients": [
+                    "1 cup Bajra Flour",
+                    "1/2 cup Grated Bottle Gourd (Lauki)",
+                    "1/2 tsp Cumin Seeds",
+                    "Salt to taste"
+                ],
+                "instructions": "Mix all ingredients into a dough. Roll into parathas and cook on a pan with minimal oil until golden brown."
+            },
+            "Rajgira (Amaranth) Puri": {
+                "ingredients": [
+                    "1 cup Amaranth Flour",
+                    "1/2 cup Boiled & Mashed Potato",
+                    "A pinch of Salt",
+                    "1/4 tsp Carom Seeds"
+                ],
+                "instructions": "Mix ingredients into a firm dough. Roll into small discs and deep fry in oil until puffed and golden brown."
+            },
+            "Kodo Millet Fried Rice": {
+                "ingredients": [
+                    "1 cup Cooked Kodo Millet",
+                    "1/2 cup Chopped Vegetables (Carrot, Capsicum, Peas)",
+                    "1/2 tsp Soy Sauce",
+                    "1/2 tsp Salt",
+                    "1/4 tsp Black Pepper"
+                ],
+                "instructions": "Heat oil in a pan, sauté vegetables until slightly soft. Add cooked kodo millet, soy sauce, salt, and black pepper. Stir fry for 3 minutes and serve hot."
+            },
+            "Sweet Corn & Millet Soup": {
+                "ingredients": [
+                    "1/2 cup Sweet Corn",
+                    "1/2 cup Cooked Little Millet",
+                    "2 cups Water",
+                    "1/2 tsp Black Pepper",
+                    "Salt to taste"
+                ],
+                "instructions": "Blend half the sweet corn into a puree. Heat water in a pan, add corn puree, whole corn, cooked millet, and seasoning. Simmer for 5 minutes and serve hot."
+            },
+            "Jackfruit Biryani": {
+                "ingredients": [
+                    "1 cup Cooked Brown Rice",
+                    "1/2 cup Raw Jackfruit, chopped",
+                    "1 small Onion, sliced",
+                    "1 tsp Garam Masala",
+                    "1/2 tsp Salt"
+                ],
+                "instructions": "Sauté onions in oil, add jackfruit pieces and spices. Cook until soft. Mix with cooked brown rice and simmer for 5 minutes."
+            },
+            "Barnyard Millet Payasam": {
+                "ingredients": [
+                    "1/2 cup Barnyard Millet",
+                    "1 cup Coconut Milk",
+                    "1/4 cup Jaggery",
+                    "1 tbsp Chopped Nuts"
+                ],
+                "instructions": "Cook millet in water until soft. Add coconut milk and jaggery, simmer for 5 minutes. Garnish with nuts and serve warm."
+            },
+            "Peanut Jaggery Balls": {
+                "ingredients": [
+                    "1/2 cup Peanuts, roasted",
+                    "1/4 cup Jaggery, melted"
+                ],
+                "instructions": "Grind peanuts coarsely, mix with melted jaggery. Shape into small balls and let them cool."
+            },
+            "Ragi Coconut Ladoo": {
+                "ingredients": [
+                    "1 cup Ragi Flour",
+                    "1/2 cup Grated Coconut",
+                    "1/4 cup Jaggery",
+                    "1 tbsp Ghee"
+                ],
+                "instructions": "Roast ragi flour in ghee until aromatic. Add grated coconut and jaggery, mix well. Shape into ladoos while warm."
+            },
+            "Chickpea Wrap": {
+                "ingredients": [
+                    "1 cup Cooked Chickpeas",
+                    "1 Whole Wheat Roti",
+                    "1/2 cup Chopped Vegetables (Cabbage, Carrot, Tomato)",
+                    "1 tbsp Yogurt Dressing"
+                ],
+                "instructions": "Mash chickpeas and mix with vegetables and dressing. Spread on a roti, roll tightly, and serve."
+            },
+            "Ragi Chocolate Muffins": {
+                "ingredients": [
+                    "1 cup Ragi Flour",
+                    "1/2 cup Cocoa Powder",
+                    "1/2 cup Jaggery",
+                    "1/2 cup Milk",
+                    "1/4 tsp Baking Soda"
+                ],
+                "instructions": "Mix dry ingredients together. Add milk and stir into a smooth batter. Pour into muffin molds and bake at 180°C for 15 minutes."
+            }
+        }    
